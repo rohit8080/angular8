@@ -1,0 +1,24 @@
+<div [@routerTransition]>
+    <app-page-header [heading]="'Forms'" [icon]="'fa-edit'"></app-page-header>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <form [formGroup]="angForm" formControlName="filename">
+
+                <fieldset class="form-group">
+                    <label for="exampleInputFile">File input</label>
+                    <input type="file" class="form-control-file" name="filename" [value]="">
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <label>Text area</label>
+                    <textarea class="form-control" rows="3"></textarea>
+                </fieldset>
+
+                <button class="btn btn-primary" type="buttton" (click)="uploadRecords(filename.value)">Submit</button>
+
+            </form>
+        </div>
+    </div>
+    <!-- /.row -->
+</div>
